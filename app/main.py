@@ -1,4 +1,7 @@
 # pylint: disable=no-name-in-module
+import os, sys
+
+sys.path.insert(0, os.path.abspath(".."))
 from fastapi import FastAPI
 from . import models, oauth2
 from .database import engine, SessionLocal
