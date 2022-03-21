@@ -1,13 +1,13 @@
 # pylint: disable=no-name-in-module
-import os, sys
 
-sys.path.insert(0, os.path.abspath(".."))
+   
 from fastapi import FastAPI
-from . import models, oauth2
-from .database import engine, SessionLocal
-from .routers import post, user, auth, vote
-from .config import Settings
 from fastapi.middleware.cors import CORSMiddleware
+
+from . import models
+from .database import engine
+from .routers import post, user, auth, vote
+from .config import settings
 
 # setting = Settings()
 # print(setting.database_username)
